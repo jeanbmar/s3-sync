@@ -36,7 +36,7 @@ export class CopyBucketObjectCommand {
       {
         Bucket: this.targetBucket,
         Key: this.bucketObject.id,
-        CopySource: encodeURI(
+        CopySource: encodeURIComponent(
           `${this.bucketObject.bucket}/${this.bucketObject.key}`
         ),
       },
